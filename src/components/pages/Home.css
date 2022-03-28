@@ -1,0 +1,112 @@
+:root { 
+    --main-color : #d6a637;
+}
+
+#home { 
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    width: 100%;
+    background: rgb(255, 255, 255);
+}
+
+#home .text-box {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+    margin: auto;
+    width: 600px;
+  
+}
+
+#home .text-box h2{
+    font-size: 2rem;
+}
+
+#home .text-box p {
+    color: rgb(51, 51, 51);
+    font-size: 0.85rem;;  
+}
+
+#home .text-box p, #home .text-box h2{
+    text-align: center;
+}
+ .line { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 4px;
+    width: 60px;
+    background: var(--main-color);
+    margin-top: -1rem;
+  
+}
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
+#home .home-container { 
+    display: flex;
+    flex-wrap: wrap;
+ 
+
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 8%;
+}
+
+#home .home-container .box { 
+    width: 300px;
+    height: 200px;
+    
+    object-fit: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home .home-container .box .text-box{
+    width: fit-content;
+ 
+}
+
+#home .home-container .box .icon-box .icon { 
+    font-size: 3.5rem;
+    color:var(--main-color);
+}
+#home .home-container .box .text-box p{
+    margin-top: -1rem;
+    color: rgb(51, 51, 51);
+    font-size: 0.85rem;;
+ 
+}
+
+@media screen and (max-width: 960px) {
+
+    #home {
+      
+    }
+    #home .text-box { 
+        width: 100%;
+    }
+
+    #home .home-container {
+        flex-direction: column;
+    }
+
+    #home .home-container .box { 
+        width: 100%;
+        height: 100%;
+        margin-bottom: 2rem;;
+    }
+
+    #home .home-container .box .text-box { 
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
